@@ -15,10 +15,10 @@ gulp.task('js', () => {
             }))
             .pipe(gulp.dest('dist/js'))
             */
-    browserify({entries:'./static/js/pages/index/index.js',debug: true})
+    browserify({entries:'./static/js/pages/main/main.js',debug: true})
         .transform(babelify,{presets: ["es2015","react"]})
         .bundle()
-        .pipe(source('index.js'))
+        .pipe(source('main.js'))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./dist/js'))
 });

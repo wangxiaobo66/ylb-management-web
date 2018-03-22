@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
 
-function index(state={},action){
+function main(state={user:1,id:1},action){
     switch (action.type){
         default:
             return state;
@@ -8,5 +8,5 @@ function index(state={},action){
 }
 
 export const YLB = combineReducers({
-    index//首页
+    main//首页
 });
