@@ -12,4 +12,4 @@ require('./gulp/img');
 require('./gulp/watch');
 require('./gulp/server');
 
-gulp.task('dev',['js','template','server','watch']);
+gulp.task('dev',['js','template','watch','server']);

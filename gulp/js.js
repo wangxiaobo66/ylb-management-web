@@ -1,13 +1,13 @@
 const gulp = require('gulp');
-const babel = require('gulp-babel');
+//const babel = require('gulp-babel');
 
 const browserify = require('browserify');
 const babelify = require('babelify');
-const reactify = require('reactify');
 const source = require('vinyl-source-stream');
+const sourcemaps = require('gulp-sourcemaps');
 
-gulp.task('devJs', () => {
-    /*
+gulp.task('js', () => {
+        /*
         gulp.src('./static/js/pages/index.js')
             .pipe(babel({
                 presets: ['env', 'react'],
@@ -15,11 +15,10 @@ gulp.task('devJs', () => {
             }))
             .pipe(gulp.dest('dist/js'))
             */
-
-    return browserify('./static/js/pages/index.js')
-        .transform(reactify)
-        //.transform(babelify,{presets: ["es2015","react"]})
+    browserify({entries:'./static/js/pages/index/index.js',debug: true})
+        .transform(babelify,{presets: ["es2015","react"]})
         .bundle()
         .pipe(source('index.js'))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('./dist/js'))
 });

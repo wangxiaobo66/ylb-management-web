@@ -1,7 +1,15 @@
-require('../../css/pages/index.scss');
+//require('./index.scss');
 
 const React = require('react');
 const render = require('react-dom').render;
+
+const { Provider, connect } = require('react-redux');
+const { createStore, applyMiddleware } = require('redux');
+
+const thunk = require('redux-thunk').default;
+const { YLB } = require('../../redux/redux');
+
+let store = createStore(YLB, applyMiddleware(thunk));
 
 class component extends React.Component {
     constructor(props) {
@@ -10,12 +18,12 @@ class component extends React.Component {
     }
     render() {
         return (
-            <div className="index">123
+            <div className="module-index">还是测试
             </div>
         )
     }
 }
-/*
+
 function select(state) {
     return {
         index: state.index
@@ -30,4 +38,3 @@ render(
     </Provider>,
     document.getElementById("index")
 );
-*/
