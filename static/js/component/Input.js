@@ -15,7 +15,7 @@ export default class Input extends React.Component {
                 <span className="login-user" key={"span"+index}>
                 </span>
                 <input id={obj.name} name={obj.name} type={obj.type}
-                       onchange={this.change()} className="login-input"
+                       onChange={this.change()} className="login-input"
                        placeholder={obj.placeholder} key={"input"+index}/>
             </div>
         );

@@ -47,9 +47,11 @@ export default class Login extends React.Component {
         )
     }
     createInput(data){
-        let List = data.map((obj,index) =>{
-                    <Input info={obj} index={index}/>
-                });
+        let List = [];
+        data.map((obj,index) =>{
+            List.push(<Input obj={obj} index={index}/>)
+        });
+        console.log(List,'*');
         return List;
     }
 }
