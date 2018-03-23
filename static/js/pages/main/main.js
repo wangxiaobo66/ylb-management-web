@@ -21,10 +21,8 @@ class Main extends React.Component {
         this.state = {}
     }
     render() {
-        let {main} = this.props;
-        console.log(main);
         return (
-            <div className="module-index">
+            <div className="module-main">
                 {this.props.children}
             </div>
         )
@@ -42,10 +40,10 @@ let LOGIN =connect(select)(Login);
 render(
     <Provider store={store}>
         <Router history={hashHistory}>
-            <Route path="/" component={App}>
+            <Route path="/" component={withRouter(App)}>
                 <IndexRoute component = {withRouter(INDEX)}/>
-                <Route path="index" component={INDEX}/>
-                <Route path="login" component={LOGIN}/>
+                <Route path="index" component={withRouter(INDEX)}/>
+                <Route path="login" component={withRouter(LOGIN)}/>
             </Route>
         </Router>
     </Provider>,

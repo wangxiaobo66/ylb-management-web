@@ -1,3 +1,72 @@
-.login{
-  color:#000
+body{
+  font-family: 'Microsoft YaHei';
+  font: 14px/1.5 Tahoma, 'Droid Sans', 'Hiragino Sans GB','Microsoft YaHei';
+  color: #333;
+  height: 100%;
+}
+body,html,div,p{
+  margin:0;padding:0;
+}
+.module-login{
+  background: url(../img/backstage-bg.jpg) no-repeat center top;
+  .login-wrap{
+    padding: 150px 0;
+    width: 1284px;
+    margin: auto;
+    overflow: hidden;
+    zoom: 1;
+    .login-left{
+      width:588px;
+      height: 717px;
+      float: left;
+      padding: 63px 0 0 56px;
+      background: url(../img/backstage-login-bg.jpg) no-repeat;
+      .login-left-title{
+        font-size: 60px;
+        line-height: 80px;
+        color: #0060b3;
+      }
+      .login-left-tips{
+        padding-top: 15px;
+        color: #0060b3;
+        .login-line{
+          height: 8px;
+          width: 50px;
+          background-color: #0060b3;
+          margin-bottom: 10px;
+          display: inline-block;
+          overflow: hidden;
+          zoom: 1;
+        }
+      }
+    }
+    .login-right{
+      background-color: #fff;
+      float: left;
+      width: 638px;
+      height: 630px;
+      padding: 104px 0 45px 0;
+      text-align: center;
+      position: relative;
+      .login-right-name{
+        em{
+          margin-top: 20px;
+          border-top: 5px solid #0060b3;
+          padding-top: 15px;
+          font-size: 18px;
+          color: #245093;
+          display: inline-block;
+          overflow: hidden;
+          zoom: 1;
+          font-style: normal;
+        }
+      }
+      .login-right-frame{
+        width: 310px;
+        margin: auto;
+        text-align: left;
+        padding-top: 30px;
+      }
+    }
+  }
 }

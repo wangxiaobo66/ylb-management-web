@@ -9,8 +9,6 @@ export default class Index extends React.Component {
     componentWillReceiveProps(nextProps) {
     }
     componentDidMount() {
-        let {main} = this.props;
-        console.log(main,'***')
     }
     render() {
         return(
